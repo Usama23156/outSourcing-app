@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector concept compass needle">
+  <circle cx="256" cy="256" r="168" stroke="#3D5A73" stroke-width="10" fill="#0B1F3A" />
+  <circle cx="256" cy="256" r="120" stroke="#1A2332" stroke-width="6" fill="none" opacity="0.65" />
+  <path d="M256 256L256 108" stroke="#F4F6F9" stroke-width="8" stroke-linecap="round" opacity="0.35" />
+  <path d="M256 256L256 404" stroke="#F4F6F9" stroke-width="8" stroke-linecap="round" opacity="0.2" />
+  <path d="M256 256L108 256" stroke="#F4F6F9" stroke-width="8" stroke-linecap="round" opacity="0.2" />
+  <path d="M256 256L404 256" stroke="#F4F6F9" stroke-width="8" stroke-linecap="round" opacity="0.2" />
+  <path d="M256 320L256 96L360 176L256 320Z" fill="#E85D4C" />
+  <path d="M256 320L256 416L200 368L256 320Z" fill="#3D5A73" />
+  <circle cx="256" cy="256" r="18" fill="#F4F6F9" />
+  <circle cx="256" cy="256" r="8" fill="#E85D4C" />
+</svg>

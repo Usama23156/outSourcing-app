@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector concept momentum bars">
+  <rect x="88" y="328" width="56" height="56" rx="8" fill="#0B1F3A" transform="rotate(-45 116 356)" />
+  <rect x="168" y="248" width="72" height="72" rx="10" fill="#3D5A73" transform="rotate(-45 204 284)" />
+  <rect x="264" y="152" width="88" height="88" rx="12" fill="#E85D4C" transform="rotate(-45 308 196)" />
+  <rect x="368" y="72" width="56" height="56" rx="8" fill="#F4F6F9" transform="rotate(-45 396 100)" />
+  <path d="M120 360L200 280L304 176L392 88" stroke="#1A2332" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14" opacity="0.45" />
+</svg>

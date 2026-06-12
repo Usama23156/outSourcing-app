@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector concept trajectory arc">
+  <path d="M88 392C88 392 160 120 360 120" stroke="#1A2332" stroke-width="24" stroke-linecap="round" />
+  <path d="M112 368C112 368 176 144 336 144" stroke="#3D5A73" stroke-width="16" stroke-linecap="round" />
+  <path d="M136 344C136 344 192 168 312 168" stroke="#E85D4C" stroke-width="12" stroke-linecap="round" />
+  <path d="M360 120L404 96L392 152L360 120Z" fill="#E85D4C" />
+  <circle cx="120" cy="352" r="18" fill="#0B1F3A" stroke="#F4F6F9" stroke-width="4" />
+  <circle cx="200" cy="248" r="10" fill="#E85D4C" opacity="0.75" />
+  <circle cx="280" cy="168" r="7" fill="#F4F6F9" opacity="0.55" />
+</svg>

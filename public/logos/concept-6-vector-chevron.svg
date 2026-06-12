@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector concept chevron stack">
+  <path d="M96 360L256 160L416 360" stroke="#1A2332" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M128 360L256 192L384 360" stroke="#3D5A73" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M160 360L256 224L352 360" stroke="#E85D4C" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M256 128L280 176H232L256 128Z" fill="#E85D4C" />
+  <circle cx="256" cy="96" r="12" fill="#F4F6F9" />
+</svg>

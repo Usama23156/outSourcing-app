@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const concepts = [
+const coreConcepts = [
   {
     id: "concept-1-bridge",
     name: "The Bridge",
@@ -33,6 +33,116 @@ const concepts = [
   },
 ] as const;
 
+const vectorConcepts = [
+  {
+    id: "concept-5-vector",
+    name: "Vector Original",
+    meaning: "Diagonal trajectory with momentum trail.",
+    feeling: "Direct, confident, forward.",
+  },
+  {
+    id: "concept-6-vector-chevron",
+    name: "Vector Chevron",
+    meaning: "Stacked upward chevrons signaling acceleration.",
+    feeling: "Bold, climbing, performance-driven.",
+  },
+  {
+    id: "concept-7-vector-arc",
+    name: "Vector Arc",
+    meaning: "Curved trajectory path toward a target.",
+    feeling: "Strategic, guided, precise.",
+  },
+  {
+    id: "concept-8-vector-converge",
+    name: "Vector Converge",
+    meaning: "Multiple paths aligning into one direction.",
+    feeling: "Focused, unified, executive.",
+  },
+  {
+    id: "concept-9-vector-flow",
+    name: "Vector Flow",
+    meaning: "Continuous forward curve through transformation.",
+    feeling: "Fluid, adaptive, modern.",
+  },
+  {
+    id: "concept-10-vector-compass",
+    name: "Vector Compass",
+    meaning: "True north direction and strategic orientation.",
+    feeling: "Authoritative, calibrated, premium.",
+  },
+  {
+    id: "concept-11-vector-momentum",
+    name: "Vector Momentum",
+    meaning: "Escalating blocks showing scale and speed.",
+    feeling: "Dynamic, scaling, energetic.",
+  },
+] as const;
+
+function LogoCard({
+  id,
+  name,
+  meaning,
+  feeling,
+}: {
+  id: string;
+  name: string;
+  meaning: string;
+  feeling: string;
+}) {
+  return (
+    <article className="overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white shadow-[0_24px_60px_rgba(11,31,58,0.08)]">
+      <div className="grid grid-cols-2">
+        <div className="flex items-center justify-center bg-[#F4F6F9] p-10">
+          <Image
+            src={`/logos/${id}-512.png`}
+            alt={`${name} logo on light background`}
+            width={160}
+            height={160}
+          />
+        </div>
+        <div className="flex items-center justify-center bg-[#0B1F3A] p-10">
+          <Image
+            src={`/logos/${id}-512.png`}
+            alt={`${name} logo on dark background`}
+            width={160}
+            height={160}
+          />
+        </div>
+      </div>
+
+      <div className="border-t border-[#0B1F3A]/8 p-8">
+        <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+          {name}
+        </h2>
+        <p className="mt-3 text-base leading-7 text-[#3D5A73]">{meaning}</p>
+        <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#E85D4C]">
+          {feeling}
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3 text-sm font-medium text-[#0B1F3A]">
+          <a
+            href={`/logos/${id}.svg`}
+            className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
+          >
+            SVG
+          </a>
+          <a
+            href={`/logos/${id}-512.png`}
+            className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
+          >
+            PNG 512
+          </a>
+          <a
+            href={`/logos/${id}-1024.png`}
+            className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
+          >
+            PNG 1024
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export default function LogosPage() {
   return (
     <main className="min-h-screen bg-[#F4F6F9] px-6 py-16 text-[#1A2332] sm:px-10">
@@ -42,74 +152,39 @@ export default function LogosPage() {
             Brand exploration
           </p>
           <h1 className="mt-3 text-4xl font-bold tracking-[-0.04em] text-[#0B1F3A] sm:text-5xl">
-            Five unique icon-only logo concepts
+            Logo concepts
           </h1>
           <p className="mt-4 text-lg leading-8 text-[#3D5A73]">
-            Radically distinct marks for a premium outsourcing and
-            performance-based services company. SVG and transparent PNG
-            exports included for navbar, favicon, and enterprise branding.
+            Five core directions plus seven Vector explorations for Apex
+            Vector. SVG and transparent PNG exports included.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
-          {concepts.map((concept) => (
-            <article
-              key={concept.id}
-              className="overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white shadow-[0_24px_60px_rgba(11,31,58,0.08)]"
-            >
-              <div className="grid grid-cols-2">
-                <div className="flex items-center justify-center bg-[#F4F6F9] p-10">
-                  <Image
-                    src={`/logos/${concept.id}-512.png`}
-                    alt={`${concept.name} logo on light background`}
-                    width={160}
-                    height={160}
-                  />
-                </div>
-                <div className="flex items-center justify-center bg-[#0B1F3A] p-10">
-                  <Image
-                    src={`/logos/${concept.id}-512.png`}
-                    alt={`${concept.name} logo on dark background`}
-                    width={160}
-                    height={160}
-                  />
-                </div>
-              </div>
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+            Vector explorations
+          </h2>
+          <p className="mt-2 max-w-2xl text-base leading-7 text-[#3D5A73]">
+            Additional forward-motion marks — direction, momentum, and strategic
+            progress. Each uses a different visual language.
+          </p>
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {vectorConcepts.map((concept) => (
+              <LogoCard key={concept.id} {...concept} />
+            ))}
+          </div>
+        </section>
 
-              <div className="border-t border-[#0B1F3A]/8 p-8">
-                <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
-                  {concept.name}
-                </h2>
-                <p className="mt-3 text-base leading-7 text-[#3D5A73]">
-                  {concept.meaning}
-                </p>
-                <p className="mt-2 text-sm font-semibold uppercase tracking-[0.16em] text-[#E85D4C]">
-                  {concept.feeling}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3 text-sm font-medium text-[#0B1F3A]">
-                  <a
-                    href={`/logos/${concept.id}.svg`}
-                    className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
-                  >
-                    SVG
-                  </a>
-                  <a
-                    href={`/logos/${concept.id}-512.png`}
-                    className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
-                  >
-                    PNG 512
-                  </a>
-                  <a
-                    href={`/logos/${concept.id}-1024.png`}
-                    className="rounded-full border border-[#0B1F3A]/12 px-4 py-2 hover:border-[#E85D4C]"
-                  >
-                    PNG 1024
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+        <section className="mt-20">
+          <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+            All five core concepts
+          </h2>
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {coreConcepts.map((concept) => (
+              <LogoCard key={concept.id} {...concept} />
+            ))}
+          </div>
+        </section>
       </div>
     </main>
   );

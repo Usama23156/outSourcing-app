@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector concept flow curve">
+  <path d="M96 352C96 352 120 160 256 160C392 160 416 352 416 352" stroke="#1A2332" stroke-width="24" stroke-linecap="round" />
+  <path d="M128 320C128 320 148 192 256 192C364 192 384 320 384 320" stroke="#3D5A73" stroke-width="16" stroke-linecap="round" />
+  <path d="M392 320L432 288L424 344L392 320Z" fill="#E85D4C" />
+  <path d="M120 320L80 352L88 296L120 320Z" fill="#0B1F3A" />
+  <circle cx="256" cy="160" r="16" fill="#E85D4C" />
+  <circle cx="256" cy="256" r="10" fill="#F4F6F9" opacity="0.8" />
+</svg>
