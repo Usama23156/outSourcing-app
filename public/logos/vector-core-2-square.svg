@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector Core Square">
-  <path d="M256 176 L256 96 L336 96 L336 176 L296 176 L296 136 L256 136 Z" fill="#0B1F3A" />
+  <path d="M256 176 L256 96 L336 96 L336 176 L296 176 L296 136 L256 136 Z" fill="#E85D4C" />
   <path d="M336 256 L416 256 L416 336 L336 336 L336 296 L376 296 L376 256 Z" fill="#3D5A73" />
   <path d="M256 336 L256 416 L176 416 L176 336 L216 336 L216 376 L256 376 Z" fill="#0B1F3A" />
-  <path d="M176 256 L96 256 L96 176 L176 176 L176 216 L136 216 L136 256 Z" fill="#3D5A73" />
+  <path d="M176 256 L96 256 L96 176 L176 176 L176 216 L136 216 L136 256 Z" fill="#1A2332" />
   <rect x="196" y="196" width="120" height="120" rx="4" fill="#F4F6F9" />
-  <rect x="228" y="228" width="56" height="56" rx="2" fill="#0B1F3A" />
+  <rect x="228" y="228" width="56" height="56" rx="2" fill="#1A2332" />
+  <circle cx="256" cy="256" r="8" fill="#E85D4C" />
 </svg>

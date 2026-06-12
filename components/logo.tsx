@@ -11,7 +11,12 @@ export type LogoConcept =
   | "concept-8-vector-converge"
   | "concept-9-vector-flow"
   | "concept-10-vector-compass"
-  | "concept-11-vector-momentum";
+  | "concept-11-vector-momentum"
+  | "vector-core-1-hex"
+  | "vector-core-2-square"
+  | "vector-core-3-chevron"
+  | "vector-core-4-nested"
+  | "vector-core-5-diamond";
 
 interface LogoProps {
   className?: string;
@@ -22,7 +27,7 @@ interface LogoProps {
 export function Logo({
   className = "",
   size = 36,
-  concept = "concept-5-vector",
+  concept = "vector-core-1-hex",
 }: LogoProps) {
   return (
     <Image
