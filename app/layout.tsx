@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   description:
     "Scale faster with vetted global specialists, measurable delivery targets, and AI-assisted operations from Apex Vector.",
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.png",
+    icon: "/sample-logo.svg",
+    apple: "/sample-logo.png",
   },
 };
 
