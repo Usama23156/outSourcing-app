@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Apex Vector | Performance-Based Outsourcing",
   description:
     "Scale faster with vetted global specialists, measurable delivery targets, and AI-assisted operations from Apex Vector.",
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

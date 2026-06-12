@@ -8,6 +8,7 @@ import {
 import type { ComponentType, SVGProps } from "react";
 import Image from "next/image";
 
+import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
 interface TrustMetric {
@@ -58,9 +59,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-3 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/40 px-3 py-2 text-sm font-semibold tracking-tight text-[#F4F6F9] shadow-[0_16px_40px_rgba(11,31,58,0.24)] backdrop-blur"
             aria-label="Apex Vector home"
           >
-            <span className="flex size-9 items-center justify-center rounded-full bg-[#E85D4C] text-[#F4F6F9]">
-              AV
-            </span>
+            <Logo size={36} className="shrink-0" />
             Apex Vector
           </a>
           <div className="hidden items-center gap-2 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/40 px-4 py-2 text-sm font-medium text-[#F4F6F9]/80 shadow-[0_16px_40px_rgba(11,31,58,0.2)] backdrop-blur md:flex">
