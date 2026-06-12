@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Concept 2 The Engine">
+  <circle cx="256" cy="256" r="52" fill="#0B1F3A" />
+  <circle cx="256" cy="256" r="28" fill="#1A2332" />
+  <circle cx="256" cy="256" r="12" fill="#E85D4C" />
+  <path d="M256 84L292 176L256 148L220 176Z" fill="#E85D4C" />
+  <path d="M428 256L336 292L364 256L336 220Z" fill="#3D5A73" />
+  <path d="M256 428L220 336L256 364L292 336Z" fill="#0B1F3A" />
+  <path d="M84 256L176 220L148 256L176 292Z" fill="#E85D4C" opacity="0.72" />
+  <path d="M360 128L312 196L284 168L332 100Z" fill="#3D5A73" />
+  <path d="M360 384L332 316L284 344L312 412Z" fill="#0B1F3A" />
+  <path d="M152 384L180 316L228 344L200 412Z" fill="#E85D4C" opacity="0.72" />
+  <path d="M152 128L200 100L228 168L180 196Z" fill="#3D5A73" opacity="0.85" />
+  <path d="M300 256H412" stroke="#F4F6F9" stroke-width="10" stroke-linecap="round" opacity="0.45" />
+  <path d="M412 256L388 244V268L412 256Z" fill="#F4F6F9" opacity="0.75" />
+</svg>
