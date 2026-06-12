@@ -100,17 +100,16 @@ export function HeroSection() {
               >
                 <a href="#book-strategy-call" aria-label="Book a strategy call">
                   Book a Strategy Call
-                  <ArrowRight className="size-5" aria-hidden="true" />
+                  
                 </a>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="h-14 w-full rounded-full border-[#0B1F3A]/20 bg-[#F4F6F9]/65 px-7 text-base font-bold text-[#0B1F3A] shadow-[0_18px_42px_rgba(11,31,58,0.08)] hover:border-[#E85D4C] hover:bg-[#F4F6F9] hover:text-[#0B1F3A] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
+              <p
+                className="h-14 w-full flex justify-center items-center px-7 text-base font-bold text-[#0B1F3A]   hover:text-[#0B1F3A] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
               >
-                <a href="#how-it-works">See How It Works</a>
-              </Button>
+                <a href="#how-it-works">See How It Works
+                </a>
+                  <ArrowRight className="size-5" aria-hidden="true" />
+              </p>
             </div>
           </div>
 
