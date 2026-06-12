@@ -47,7 +47,7 @@ export function HeroSection() {
       />
 
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(244,246,249,0.97)_0%,rgba(244,246,249,0.92)_38%,rgba(244,246,249,0.55)_52%,rgba(11,31,58,0.08)_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(244,246,249,0.95)_0%,rgba(244,246,249,0.82)_34%,rgba(11,31,58,0.22)_50%,rgba(11,31,58,0)_72%)]"
         aria-hidden="true"
       />
 
