@@ -43,12 +43,12 @@ export function HeroSection() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover object-[70%_center] lg:object-right"
         aria-hidden="true"
       />
 
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,31,58,0.42)_0%,rgba(11,31,58,0.12)_42%,transparent_68%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(11,31,58,0.88)_0%,rgba(11,31,58,0.72)_38%,rgba(11,31,58,0.28)_58%,transparent_78%)]"
         aria-hidden="true"
       />
 
@@ -68,8 +68,8 @@ export function HeroSection() {
           </div>
         </header>
 
-        <div className="relative z-10 flex flex-1 items-center justify-center py-14 lg:py-10">
-          <div className="mx-auto max-w-4xl text-center motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700">
+        <div className="relative z-10 flex flex-1 items-center py-14 lg:py-10">
+          <div className="mx-auto max-w-3xl text-center motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700 lg:mx-0 lg:max-w-xl lg:text-left xl:max-w-2xl">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/45 px-4 py-2 text-sm font-semibold text-[#F4F6F9] shadow-[0_18px_48px_rgba(11,31,58,0.24)] backdrop-blur">
               <ShieldCheck className="size-4 text-[#E85D4C]" aria-hidden="true" />
               Enterprise outsourcing built around accountability
@@ -87,7 +87,7 @@ export function HeroSection() {
               . Not hours.
             </h1>
 
-            <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#F4F6F9]/75 sm:text-xl">
+            <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#F4F6F9]/75 sm:text-xl lg:mx-0">
               Apex Vector helps enterprise teams scale faster with vetted global
               specialists, measurable delivery targets, and AI-assisted
               workflows engineered to improve performance from day one.
@@ -100,7 +100,7 @@ export function HeroSection() {
                 return (
                   <div
                     key={item.label}
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-[#F4F6F9]/12 bg-[#0B1F3A]/40 px-4 py-3 text-sm font-semibold text-[#F4F6F9] shadow-[0_16px_40px_rgba(11,31,58,0.2)] backdrop-blur"
+                    className="flex items-center justify-center gap-2 rounded-2xl border border-[#F4F6F9]/12 bg-[#0B1F3A]/40 px-4 py-3 text-sm font-semibold text-[#F4F6F9] shadow-[0_16px_40px_rgba(11,31,58,0.2)] backdrop-blur lg:justify-start"
                   >
                     <Icon className="size-4 text-[#E85D4C]" aria-hidden="true" />
                     <span>{item.label}</span>
@@ -109,7 +109,7 @@ export function HeroSection() {
               })}
             </div>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
               <Button
                 asChild
                 size="lg"
