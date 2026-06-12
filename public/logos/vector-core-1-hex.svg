@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector Core Hex">
+  <path d="M256 174 L327 215 L427.5 157 L256 58 Z" fill="#0B1F3A" />
+  <path d="M327 215 L327 297 L427.5 355 L427.5 157 Z" fill="#3D5A73" />
+  <path d="M327 297 L256 338 L256 454 L427.5 355 Z" fill="#0B1F3A" />
+  <path d="M256 338 L185 297 L84.5 355 L256 454 Z" fill="#3D5A73" />
+  <path d="M185 297 L185 215 L84.5 157 L84.5 355 Z" fill="#0B1F3A" />
+  <path d="M185 215 L256 174 L256 58 L84.5 157 Z" fill="#3D5A73" />
+  <path d="M256 174 L327 215 L327 297 L256 338 L185 297 L185 215 Z" fill="#F4F6F9" />
+</svg>

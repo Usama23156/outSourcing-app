@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector Core Nested">
+  <path d="M256 64 L424 160 V352 L256 448 L88 352 V160 Z" stroke="#0B1F3A" stroke-width="28" fill="none" stroke-linejoin="round" />
+  <path d="M256 112 L376 176 V336 L256 400 L136 336 V176 Z" stroke="#3D5A73" stroke-width="24" fill="none" stroke-linejoin="round" />
+  <path d="M256 160 L328 200 V312 L256 352 L184 312 V200 Z" fill="#0B1F3A" />
+  <path d="M256 200 L296 224 V288 L256 312 L216 288 V224 Z" fill="#F4F6F9" />
+  <path d="M256 224 V288 L240 280 V232 Z" fill="#3D5A73" />
+  <path d="M256 224 L272 232 V280 L256 288 Z" fill="#3D5A73" />
+</svg>

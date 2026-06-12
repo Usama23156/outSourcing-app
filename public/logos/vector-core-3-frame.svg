@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector Core Frame">
+  <path d="M256 80L392 160V352L256 432L120 352V160Z" stroke="#0B1F3A" stroke-width="24" fill="none" />
+  <path d="M256 128L352 184V328L256 384L160 328V184Z" stroke="#3D5A73" stroke-width="20" fill="none" />
+  <path d="M256 176L312 208V304L256 336L200 304V208Z" fill="#0B1F3A" />
+  <path d="M256 208L280 224V288L256 304L232 288V224Z" fill="#F4F6F9" />
+  <path d="M256 224L256 288L240 280V232Z" fill="#3D5A73" />
+  <path d="M256 224L272 232V280L256 288Z" fill="#3D5A73" />
+</svg>

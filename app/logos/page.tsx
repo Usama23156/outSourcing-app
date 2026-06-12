@@ -1,5 +1,38 @@
 import Image from "next/image";
 
+const vectorCoreConcepts = [
+  {
+    id: "vector-core-1-hex",
+    name: "Vector Core Hex",
+    meaning: "Six interlocking segments with a precision hex void.",
+    feeling: "Precision, structure, enterprise execution.",
+  },
+  {
+    id: "vector-core-2-square",
+    name: "Vector Core Square",
+    meaning: "Four interlocking L-brackets around a square core.",
+    feeling: "Stable, modular, systematic.",
+  },
+  {
+    id: "vector-core-3-chevron",
+    name: "Vector Core Chevron",
+    meaning: "Radial chevrons converging on a central command core.",
+    feeling: "Directional, coordinated, decisive.",
+  },
+  {
+    id: "vector-core-4-nested",
+    name: "Vector Core Nested",
+    meaning: "Layered hex frames representing scalable systems.",
+    feeling: "Executive, structured, enterprise-grade.",
+  },
+  {
+    id: "vector-core-5-diamond",
+    name: "Vector Core Diamond",
+    meaning: "Faceted diamond with a focused growth center.",
+    feeling: "Premium, sharp, future-focused.",
+  },
+] as const;
+
 const coreConcepts = [
   {
     id: "concept-1-bridge",
@@ -155,12 +188,38 @@ export default function LogosPage() {
             Logo concepts
           </h1>
           <p className="mt-4 text-lg leading-8 text-[#3D5A73]">
-            Five core directions plus seven Vector explorations for Apex
-            Vector. SVG and transparent PNG exports included.
+            Vector Core geometric marks plus broader brand explorations. SVG
+            and transparent PNG exports included.
           </p>
         </div>
 
+        <section className="mt-10 overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white p-6 shadow-[0_24px_60px_rgba(11,31,58,0.08)] sm:p-8">
+          <Image
+            src="/vector-core-logos-sheet.png"
+            alt="Vector Core logo collection preview"
+            width={1600}
+            height={500}
+            className="h-auto w-full"
+          />
+        </section>
+
         <section className="mt-16">
+          <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+            Vector Core collection
+          </h2>
+          <p className="mt-2 max-w-2xl text-base leading-7 text-[#3D5A73]">
+            Five flat geometric logos in the same style as your reference —
+            interlocking angular segments, navy and slate palette, white center
+            voids.
+          </p>
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {vectorCoreConcepts.map((concept) => (
+              <LogoCard key={concept.id} {...concept} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
           <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
             Vector explorations
           </h2>

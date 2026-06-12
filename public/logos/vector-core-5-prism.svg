@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Vector Core Prism">
+  <path d="M256 96L392 184V328L256 416L120 328V184Z" fill="#3D5A73" />
+  <path d="M256 96L256 256L120 184V328L256 416L256 256L392 328V184L256 96Z" fill="#0B1F3A" />
+  <path d="M256 160L328 200V312L256 352L184 312V200Z" fill="#3D5A73" />
+  <path d="M256 200L296 224V288L256 312L216 288V224Z" fill="#F4F6F9" />
+  <path d="M256 224L256 288L232 272V240Z" fill="#0B1F3A" />
+  <path d="M256 224L280 240V272L256 288Z" fill="#0B1F3A" />
+  <path d="M256 96L392 184L256 256L120 184Z" fill="#1A2332" opacity="0.35" />
+</svg>

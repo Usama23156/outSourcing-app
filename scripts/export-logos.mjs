@@ -20,6 +20,11 @@ const concepts = [
   "concept-9-vector-flow",
   "concept-10-vector-compass",
   "concept-11-vector-momentum",
+  "vector-core-1-hex",
+  "vector-core-2-square",
+  "vector-core-3-chevron",
+  "vector-core-4-nested",
+  "vector-core-5-diamond",
 ];
 
 mkdirSync(logosDir, { recursive: true });
