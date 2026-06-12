@@ -43,12 +43,12 @@ export function HeroSection() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[72%_center] lg:object-right"
+        className="object-cover object-right"
         aria-hidden="true"
       />
 
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(244,246,249,0.15)_0%,transparent_42%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(244,246,249,0.2)_0%,transparent_48%)]"
         aria-hidden="true"
       />
 
