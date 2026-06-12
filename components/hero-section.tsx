@@ -35,61 +35,60 @@ const proofPoints: ProofPoint[] = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0B1F3A] text-[#1A2332]">
+    <section className="relative min-h-screen overflow-hidden bg-[#0B1F3A] text-[#F4F6F9]">
       <Image
         src="/hero-background-enterprise.png"
         alt=""
         fill
         priority
         sizes="100vw"
-        className="object-cover object-right"
+        className="object-cover object-center"
         aria-hidden="true"
       />
 
       <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(244,246,249,0.95)_0%,rgba(244,246,249,0.82)_34%,rgba(11,31,58,0.22)_50%,rgba(11,31,58,0)_72%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,31,58,0.35)_0%,rgba(11,31,58,0.08)_45%,transparent_70%)]"
         aria-hidden="true"
       />
 
       <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-8 sm:px-8 lg:px-10">
-
         <header className="relative z-10 flex items-center justify-between">
           <a
             href="#top"
-            className="inline-flex items-center gap-3 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/80 px-3 py-2 text-sm font-semibold tracking-tight text-[#0B1F3A] shadow-[0_16px_40px_rgba(11,31,58,0.08)] backdrop-blur"
+            className="inline-flex items-center gap-3 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/40 px-3 py-2 text-sm font-semibold tracking-tight text-[#F4F6F9] shadow-[0_16px_40px_rgba(11,31,58,0.24)] backdrop-blur"
             aria-label="Apex Vector home"
           >
-            <span className="flex size-9 items-center justify-center rounded-full bg-[#0B1F3A] text-[#F4F6F9]">
+            <span className="flex size-9 items-center justify-center rounded-full bg-[#E85D4C] text-[#F4F6F9]">
               AV
             </span>
             Apex Vector
           </a>
-          <div className="hidden items-center gap-2 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/70 px-4 py-2 text-sm font-medium text-[#3D5A73] shadow-[0_16px_40px_rgba(11,31,58,0.06)] backdrop-blur md:flex">
+          <div className="hidden items-center gap-2 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/40 px-4 py-2 text-sm font-medium text-[#F4F6F9]/80 shadow-[0_16px_40px_rgba(11,31,58,0.2)] backdrop-blur md:flex">
             <Sparkles className="size-4 text-[#E85D4C]" aria-hidden="true" />
             Performance-backed growth partners
           </div>
         </header>
 
-        <div className="relative z-10 flex flex-1 items-center py-14 lg:py-10">
-          <div className="mx-auto max-w-2xl text-center motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700 lg:mx-0 lg:max-w-[45%] lg:text-left">
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/90 px-4 py-2 text-sm font-semibold text-[#0B1F3A] shadow-[0_18px_48px_rgba(11,31,58,0.08)] backdrop-blur">
+        <div className="relative z-10 flex flex-1 items-center justify-center py-14 lg:py-10">
+          <div className="mx-auto max-w-4xl text-center motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#F4F6F9]/15 bg-[#0B1F3A]/45 px-4 py-2 text-sm font-semibold text-[#F4F6F9] shadow-[0_18px_48px_rgba(11,31,58,0.24)] backdrop-blur">
               <ShieldCheck className="size-4 text-[#E85D4C]" aria-hidden="true" />
               Enterprise outsourcing built around accountability
             </div>
 
-            <h1 className="text-balance text-5xl font-bold leading-[0.95] tracking-[-0.055em] text-[#0B1F3A] sm:text-6xl lg:text-7xl">
+            <h1 className="text-balance text-5xl font-bold leading-[0.95] tracking-[-0.055em] text-[#F4F6F9] sm:text-6xl lg:text-7xl">
               Built for{" "}
               <span className="relative inline-block text-[#E85D4C]">
                 outcomes
                 <span
-                  className="absolute -bottom-1 left-1/2 h-2 w-[94%] -translate-x-1/2 rounded-full bg-[#E85D4C]/20"
+                  className="absolute -bottom-1 left-1/2 h-2 w-[94%] -translate-x-1/2 rounded-full bg-[#E85D4C]/25"
                   aria-hidden="true"
                 />
               </span>
               . Not hours.
             </h1>
 
-            <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#3D5A73] sm:text-xl lg:mx-0">
+            <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#F4F6F9]/75 sm:text-xl">
               Apex Vector helps enterprise teams scale faster with vetted global
               specialists, measurable delivery targets, and AI-assisted
               workflows engineered to improve performance from day one.
@@ -102,7 +101,7 @@ export function HeroSection() {
                 return (
                   <div
                     key={item.label}
-                    className="flex items-center justify-center gap-2 rounded-2xl border border-[#0B1F3A]/10 bg-[#F4F6F9]/70 px-4 py-3 text-sm font-semibold text-[#1A2332] shadow-[0_16px_40px_rgba(11,31,58,0.06)] backdrop-blur lg:justify-start"
+                    className="flex items-center justify-center gap-2 rounded-2xl border border-[#F4F6F9]/12 bg-[#0B1F3A]/40 px-4 py-3 text-sm font-semibold text-[#F4F6F9] shadow-[0_16px_40px_rgba(11,31,58,0.2)] backdrop-blur"
                   >
                     <Icon className="size-4 text-[#E85D4C]" aria-hidden="true" />
                     <span>{item.label}</span>
@@ -111,11 +110,11 @@ export function HeroSection() {
               })}
             </div>
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button
                 asChild
                 size="lg"
-                className="h-14 w-full rounded-full bg-[#E85D4C] px-7 text-base font-bold text-[#F4F6F9] shadow-[0_20px_46px_rgba(232,93,76,0.28)] hover:bg-[#0B1F3A] hover:text-[#F4F6F9] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
+                className="h-14 w-full rounded-full bg-[#E85D4C] px-7 text-base font-bold text-[#F4F6F9] shadow-[0_20px_46px_rgba(232,93,76,0.35)] hover:bg-[#F4F6F9] hover:text-[#0B1F3A] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
               >
                 <a href="#book-strategy-call" aria-label="Book a strategy call">
                   Book a Strategy Call
@@ -126,7 +125,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="h-14 w-full rounded-full border-[#0B1F3A]/20 bg-[#F4F6F9]/65 px-7 text-base font-bold text-[#0B1F3A] shadow-[0_18px_42px_rgba(11,31,58,0.08)] hover:border-[#E85D4C] hover:bg-[#F4F6F9] hover:text-[#0B1F3A] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
+                className="h-14 w-full rounded-full border-[#F4F6F9]/25 bg-[#0B1F3A]/35 px-7 text-base font-bold text-[#F4F6F9] shadow-[0_18px_42px_rgba(11,31,58,0.2)] backdrop-blur hover:border-[#E85D4C] hover:bg-[#0B1F3A]/55 hover:text-[#F4F6F9] focus-visible:ring-[#E85D4C]/35 sm:w-auto"
               >
                 <a href="#how-it-works">See How It Works</a>
               </Button>
@@ -135,13 +134,13 @@ export function HeroSection() {
         </div>
 
         <div className="relative z-10 pb-8">
-          <dl className="grid overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-[#0B1F3A] shadow-[0_30px_80px_rgba(11,31,58,0.22)] sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="mx-auto grid max-w-5xl overflow-hidden rounded-[2rem] border border-[#F4F6F9]/12 bg-[#0B1F3A]/55 shadow-[0_30px_80px_rgba(11,31,58,0.32)] backdrop-blur sm:grid-cols-2 lg:grid-cols-4">
             {trustMetrics.map((metric) => (
               <div
                 key={metric.label}
                 className="border-b border-[#F4F6F9]/10 px-6 py-6 text-center last:border-b-0 sm:border-r sm:last:border-r-0 lg:border-b-0"
               >
-                <dt className="text-sm font-semibold uppercase tracking-[0.18em] text-[#F4F6F9]/70">
+                <dt className="text-sm font-semibold uppercase tracking-[0.18em] text-[#F4F6F9]/65">
                   {metric.label}
                 </dt>
                 <dd className="mt-2 text-3xl font-bold tracking-[-0.04em] text-[#F4F6F9]">
