@@ -156,6 +156,48 @@ const vectorConcepts = [
   },
 ] as const;
 
+const allLogos = [
+  ...refinedConcepts.map((c) => ({ ...c, group: "Refined slash" })),
+  ...vectorCoreConcepts.map((c) => ({ ...c, group: "Vector Core" })),
+  ...coreConcepts.map((c) => ({ ...c, group: "Core concepts" })),
+  ...vectorConcepts
+    .filter((c) => c.id !== "concept-5-vector")
+    .map((c) => ({ ...c, group: "Vector explorations" })),
+] as const;
+
+function CompactLogoTile({
+  id,
+  name,
+  group,
+}: {
+  id: string;
+  name: string;
+  group: string;
+}) {
+  return (
+    <a
+      href={`#${id}`}
+      className="group flex flex-col items-center rounded-2xl border border-[#0B1F3A]/10 bg-white p-4 shadow-[0_12px_32px_rgba(11,31,58,0.06)] transition hover:border-[#E85D4C]/40 hover:shadow-[0_16px_40px_rgba(11,31,58,0.1)]"
+    >
+      <div className="flex size-24 items-center justify-center rounded-xl bg-[#F4F6F9] p-3">
+        <Image
+          src={`/logos/${id}-512.png`}
+          alt={name}
+          width={80}
+          height={80}
+          className="size-20 object-contain"
+        />
+      </div>
+      <p className="mt-3 text-center text-xs font-semibold uppercase tracking-[0.14em] text-[#3D5A73]">
+        {group}
+      </p>
+      <p className="mt-1 text-center text-sm font-bold leading-5 text-[#0B1F3A]">
+        {name}
+      </p>
+    </a>
+  );
+}
+
 function LogoCard({
   id,
   name,
@@ -168,7 +210,10 @@ function LogoCard({
   feeling: string;
 }) {
   return (
-    <article className="overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white shadow-[0_24px_60px_rgba(11,31,58,0.08)]">
+    <article
+      id={id}
+      className="overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white shadow-[0_24px_60px_rgba(11,31,58,0.08)] scroll-mt-24"
+    >
       <div className="grid grid-cols-2">
         <div className="flex items-center justify-center bg-[#F4F6F9] p-10">
           <Image
@@ -230,13 +275,27 @@ export default function LogosPage() {
             Brand exploration
           </p>
           <h1 className="mt-3 text-4xl font-bold tracking-[-0.04em] text-[#0B1F3A] sm:text-5xl">
-            Logo concepts
+            All logo concepts
           </h1>
           <p className="mt-4 text-lg leading-8 text-[#3D5A73]">
-            Vector Core geometric marks plus broader brand explorations. SVG
-            and transparent PNG exports included.
+            {allLogos.length} marks across four collections. SVG and
+            transparent PNG exports for every concept.
           </p>
         </div>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+            Complete gallery
+          </h2>
+          <p className="mt-2 text-base leading-7 text-[#3D5A73]">
+            Click any logo to jump to its full preview and download links.
+          </p>
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {allLogos.map((logo) => (
+              <CompactLogoTile key={logo.id} {...logo} />
+            ))}
+          </div>
+        </section>
 
         <section className="mt-10 overflow-hidden rounded-[2rem] border border-[#0B1F3A]/10 bg-white p-6 shadow-[0_24px_60px_rgba(11,31,58,0.08)] sm:p-8">
           <Image
