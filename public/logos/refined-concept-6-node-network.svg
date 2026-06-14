@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Refined concept 6 node network mark">
+  <g transform="rotate(-12 256 256)">
+    <circle cx="204" cy="152" r="14" fill="#E85D4C" />
+    <circle cx="284" cy="152" r="14" fill="#E85D4C" />
+    <path d="M204 166V360" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+    <path d="M284 166V360" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+    <path d="M204 152L284 360" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+    <path d="M284 152L364 360" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+    <path d="M156 372H412" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+  </g>
+</svg>

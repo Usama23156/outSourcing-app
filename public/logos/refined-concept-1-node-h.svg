@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Refined concept 1 node bridge mark">
+  <g transform="rotate(-14 256 256)">
+    <rect x="170" y="100" width="50" height="312" rx="6" fill="#E85D4C" />
+    <rect x="292" y="100" width="50" height="312" rx="6" fill="#E85D4C" />
+  </g>
+  <circle cx="256" cy="256" r="42" fill="#F4F6F9" stroke="#F4F6F9" stroke-width="2" />
+  <circle cx="256" cy="256" r="27" fill="#0B1F3A" />
+  <path d="M256 216V296" stroke="#F4F6F9" stroke-width="5" stroke-linecap="round" />
+</svg>

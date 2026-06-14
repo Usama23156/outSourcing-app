@@ -25,6 +25,13 @@ const concepts = [
   "vector-core-3-chevron",
   "vector-core-4-nested",
   "vector-core-5-diamond",
+  "refined-concept-1-node-h",
+  "refined-concept-2-staggered-slash",
+  "refined-concept-3-slash-dot",
+  "refined-concept-4-arrow-m",
+  "refined-concept-5-twin-peaks",
+  "refined-concept-6-node-network",
+  "refined-concept-7-mountain-node",
 ];
 
 mkdirSync(logosDir, { recursive: true });

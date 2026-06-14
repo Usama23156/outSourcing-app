@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Refined concept 7 mountain node mark">
+  <g transform="rotate(-10 256 256)">
+    <circle cx="192" cy="160" r="14" fill="#E85D4C" />
+    <circle cx="260" cy="160" r="14" fill="#E85D4C" />
+    <path d="M192 174V360" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+    <path d="M260 174V360" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+    <path d="M260 160L348 360" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+    <path d="M144 372H392" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+  </g>
+</svg>

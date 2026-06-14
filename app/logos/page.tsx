@@ -1,5 +1,50 @@
 import Image from "next/image";
 
+const refinedConcepts = [
+  {
+    id: "refined-concept-1-node-h",
+    name: "Concept 1 — Node Bridge",
+    meaning: "Parallel execution paths connected through a central intelligence node.",
+    feeling: "Strongest overall. Enterprise, connected, precise.",
+  },
+  {
+    id: "refined-concept-2-staggered-slash",
+    name: "Concept 2 — Staggered Slash",
+    meaning: "Human creativity and technical depth in forward-leaning partnership.",
+    feeling: "Bold, modern, developer-native.",
+  },
+  {
+    id: "refined-concept-3-slash-dot",
+    name: "Concept 3 — Slash Dot",
+    meaning: "Code syntax abstraction signaling digital delivery and completion.",
+    feeling: "Minimal, confident, highly scalable.",
+  },
+  {
+    id: "refined-concept-4-arrow-m",
+    name: "Concept 4 — Arrow M",
+    meaning: "Dual growth vectors converging into measurable momentum.",
+    feeling: "Performance-driven, dynamic, ambitious.",
+  },
+  {
+    id: "refined-concept-5-twin-peaks",
+    name: "Concept 5 — Twin Peaks",
+    meaning: "Layered capability stacks building toward shared outcomes.",
+    feeling: "Structural, premium, partnership-led.",
+  },
+  {
+    id: "refined-concept-6-node-network",
+    name: "Concept 6 — Node Network",
+    meaning: "Distributed endpoints linked through operational infrastructure.",
+    feeling: "Networked, technical, system-oriented.",
+  },
+  {
+    id: "refined-concept-7-mountain-node",
+    name: "Concept 7 — Mountain Node",
+    meaning: "Guided ascent with anchored milestones and strategic direction.",
+    feeling: "Aspirational, balanced, leadership-focused.",
+  },
+] as const;
+
 const vectorCoreConcepts = [
   {
     id: "vector-core-1-hex",
@@ -204,6 +249,22 @@ export default function LogosPage() {
         </section>
 
         <section className="mt-16">
+          <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
+            Refined slash concepts
+          </h2>
+          <p className="mt-2 max-w-2xl text-base leading-7 text-[#3D5A73]">
+            Professional refinements of your attached concepts — preserved
+            ideas with corrected geometry, spacing, and favicon-ready stroke
+            weights.
+          </p>
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {refinedConcepts.map((concept) => (
+              <LogoCard key={concept.id} {...concept} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-20">
           <h2 className="text-2xl font-bold tracking-[-0.03em] text-[#0B1F3A]">
             Vector Core collection
           </h2>

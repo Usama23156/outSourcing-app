@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Refined concept 4 arrow momentum mark">
+  <path d="M136 368L196 128" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+  <path d="M196 128L256 248" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+  <path d="M256 248L316 128" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+  <path d="M316 128L376 368" stroke="#E85D4C" stroke-width="34" stroke-linecap="round" />
+  <path d="M196 128L186 148H206Z" fill="#E85D4C" />
+  <path d="M316 128L306 148H326Z" fill="#E85D4C" />
+  <path d="M112 372H400" stroke="#0B1F3A" stroke-width="12" stroke-linecap="round" />
+</svg>
