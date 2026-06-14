@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Slash concept growth">
+  <g transform="rotate(-14 256 256)">
+    <rect x="178" y="196" width="44" height="208" rx="7" fill="#E85D4C" />
+    <rect x="290" y="108" width="44" height="296" rx="7" fill="#0B1F3A" />
+  </g>
+  <path d="M148 372H364" stroke="#3D5A73" stroke-width="8" stroke-linecap="round" />
+  <path d="M196 320L196 372" stroke="#E85D4C" stroke-width="6" stroke-linecap="round" />
+  <path d="M308 260L308 372" stroke="#3D5A73" stroke-width="6" stroke-linecap="round" />
+</svg>

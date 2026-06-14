@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Slash concept global operations">
+  <circle cx="256" cy="256" r="148" stroke="#3D5A73" stroke-width="6" />
+  <circle cx="256" cy="256" r="108" stroke="#0B1F3A" stroke-width="4" opacity="0.35" />
+  <path d="M256 108C256 108 196 196 196 256C196 316 256 404 256 404" stroke="#E85D4C" stroke-width="28" stroke-linecap="round" />
+  <path d="M256 108C256 108 316 196 316 256C316 316 256 404 256 404" stroke="#0B1F3A" stroke-width="28" stroke-linecap="round" />
+  <circle cx="256" cy="256" r="12" fill="#E85D4C" />
+</svg>

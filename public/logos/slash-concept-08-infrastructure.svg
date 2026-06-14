@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Slash concept digital infrastructure">
+  <g transform="rotate(-14 256 256)">
+    <rect x="156" y="96" width="48" height="320" rx="7" fill="#0B1F3A" />
+    <rect x="308" y="96" width="48" height="320" rx="7" fill="#3D5A73" />
+  </g>
+  <rect x="224" y="200" width="64" height="64" rx="4" fill="#3D5A73" />
+  <rect x="224" y="272" width="64" height="64" rx="4" fill="#0B1F3A" />
+  <rect x="296" y="200" width="64" height="64" rx="4" fill="#0B1F3A" />
+  <rect x="296" y="272" width="64" height="64" rx="4" fill="#3D5A73" />
+  <circle cx="292" cy="236" r="9" fill="#E85D4C" />
+</svg>

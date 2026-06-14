@@ -9,6 +9,16 @@ const logosDir = join(root, "public", "logos");
 const sizes = [512, 1024];
 
 const concepts = [
+  "slash-concept-01-connection",
+  "slash-concept-02-growth",
+  "slash-concept-03-talent-network",
+  "slash-concept-04-performance",
+  "slash-concept-05-direction",
+  "slash-concept-06-execution",
+  "slash-concept-07-scale",
+  "slash-concept-08-infrastructure",
+  "slash-concept-09-global",
+  "slash-concept-10-future",
   "original-enhanced-1",
   "original-enhanced-2",
   "original-enhanced-3",

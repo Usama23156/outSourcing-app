@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Slash concept performance">
+  <g transform="rotate(-24 256 268)">
+    <path d="M178 360V168" stroke="#E85D4C" stroke-width="46" stroke-linecap="round" />
+    <path d="M290 360V128" stroke="#0B1F3A" stroke-width="46" stroke-linecap="round" />
+  </g>
+  <path d="M318 108L368 88" stroke="#E85D4C" stroke-width="12" stroke-linecap="round" />
+  <path d="M330 140L384 122" stroke="#3D5A73" stroke-width="8" stroke-linecap="round" />
+  <circle cx="368" cy="88" r="7" fill="#E85D4C" />
+</svg>

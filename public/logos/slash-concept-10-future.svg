@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-label="Slash concept future technology">
+  <path d="M148 392L236 120" stroke="#E85D4C" stroke-width="48" stroke-linecap="round" />
+  <path d="M276 120L364 392" stroke="#0B1F3A" stroke-width="48" stroke-linecap="round" />
+  <path d="M236 120H276" stroke="#3D5A73" stroke-width="10" stroke-linecap="round" />
+  <path d="M256 120L256 200" stroke="#3D5A73" stroke-width="8" stroke-linecap="round" />
+  <circle cx="256" cy="212" r="16" fill="#E85D4C" />
+  <circle cx="256" cy="212" r="7" fill="#0B1F3A" />
+  <path d="M196 360H316" stroke="#3D5A73" stroke-width="8" stroke-linecap="round" />
+</svg>
