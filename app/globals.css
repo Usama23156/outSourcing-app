@@ -128,3 +128,25 @@
     @apply font-sans;
   }
 }
+
+@keyframes hero-logo-tilt {
+  0%,
+  100% {
+    transform: rotateX(8deg);
+  }
+  50% {
+    transform: rotateX(-8deg);
+  }
+}
+
+.hero-logo-tilt {
+  animation: hero-logo-tilt 16s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-tilt {
+    animation: none;
+    transform: rotateX(4deg);
+  }
+}

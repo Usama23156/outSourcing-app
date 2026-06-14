@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export type LogoConcept =
+  | "hero-mountain-node"
   | "slash-concept-01-connection"
   | "slash-concept-02-growth"
   | "slash-concept-03-talent-network"
@@ -28,7 +29,7 @@ interface LogoProps {
 export function Logo({
   className = "",
   size = 36,
-  concept = "slash-concept-01-connection",
+  concept = "hero-mountain-node",
 }: LogoProps) {
   return (
     <Image
