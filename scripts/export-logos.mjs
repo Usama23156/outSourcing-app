@@ -9,6 +9,13 @@ const logosDir = join(root, "public", "logos");
 const sizes = [512, 1024];
 
 const concepts = [
+  "original-enhanced-1",
+  "original-enhanced-2",
+  "original-enhanced-3",
+  "original-enhanced-4",
+  "original-enhanced-5",
+  "original-enhanced-6",
+  "original-enhanced-7",
   "concept-1-bridge",
   "concept-2-engine",
   "concept-3-nexus",
