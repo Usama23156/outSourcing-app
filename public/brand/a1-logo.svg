@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 102" fill="none" role="img" aria-label="A1 Title Services">
+  <title>A1 Title Services</title>
+  <g transform="translate(102 0)">
+    <!-- A: thin left leg -->
+    <path d="M6 74 L38 6" stroke="#1A3B6B" stroke-width="3.25" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- A: thick right leg -->
+    <path d="M38 6 L54 74" stroke="#1A3B6B" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- A: crossbar -->
+    <path d="M17 47.5 H45" stroke="#1A3B6B" stroke-width="3.25" stroke-linecap="round"/>
+    <!-- 1 -->
+    <path d="M68.5 18.5 L80.5 6 H86.5 V74 H70.5 V18.5 H68.5 Z" fill="#4D9FE8"/>
+  </g>
+  <text
+    x="150"
+    y="96"
+    text-anchor="middle"
+    fill="#111111"
+    font-family="Arial, Helvetica, 'Liberation Sans', sans-serif"
+    font-size="17.5"
+    font-weight="600"
+    letter-spacing="2.6"
+  >A1 TITLE SERVICES</text>
+</svg>
