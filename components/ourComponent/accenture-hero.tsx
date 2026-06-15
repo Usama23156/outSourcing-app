@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 
-const heroLogoSrc = "/x-logo-original.png";
+const heroLogoSrc = "/hero-logo.png";
 
 const navLinks = [
   { href: "#how-it-works", label: "What we do" },
