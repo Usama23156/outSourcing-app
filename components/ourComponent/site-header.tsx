@@ -26,12 +26,12 @@ export function SiteHeader() {
           aria-label="Apex Vector home"
         >
           <Image
-            src="/apex-vector-logo.png"
+            src="/sample-logo.svg"
             alt="Apex Vector"
-            width={1536}
-            height={1024}
+            width={512}
+            height={512}
             priority
-            className="h-10 w-auto rounded-md bg-white px-2 py-1 sm:h-11"
+            className="h-10 w-10 object-contain sm:h-11 sm:w-11"
           />
         </a>
 

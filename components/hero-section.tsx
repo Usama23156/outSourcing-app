@@ -60,11 +60,11 @@ export function HeroSection() {
             aria-label="Apex Vector home"
           >
             <Image
-              src="/apex-vector-logo.png"
+              src="/sample-logo.svg"
               alt="Apex Vector"
-              width={1536}
-              height={1024}
-              className="h-9 w-auto"
+              width={512}
+              height={512}
+              className="h-9 w-9 object-contain"
             />
           </a>
           <div className="hidden items-center gap-2 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/70 px-4 py-2 text-sm font-medium text-[#3D5A73] shadow-[0_16px_40px_rgba(11,31,58,0.06)] backdrop-blur md:flex">
