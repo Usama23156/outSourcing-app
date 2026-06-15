@@ -1,10 +1,10 @@
 "use client";
 
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
-import { RotatingXIcon } from "@/components/ourComponent/rotating-x-icon";
 
 const navLinks = [
   { href: "#how-it-works", label: "What we do" },
@@ -49,8 +49,8 @@ export function AccentureHero() {
       }
 
       if (watermark) {
-        watermark.style.transform = `translate(${translateX * 1.4}px, ${translateY * 0.6}px) rotate(${progress * 12}deg) scale(${1 + progress * 0.08})`;
-        watermark.style.opacity = (0.22 - progress * 0.08).toFixed(3);
+        watermark.style.transform = `translate(${translateX * 1.4}px, ${translateY * 0.6}px) scale(${1 + progress * 0.08})`;
+        watermark.style.opacity = (0.3 - progress * 0.08).toFixed(3);
       }
     };
 
@@ -72,14 +72,16 @@ export function AccentureHero() {
         aria-hidden="true"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(238,99,82,0.18),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(61,90,115,0.28),transparent_36%),linear-gradient(135deg,#0a1a2f_0%,#102742_48%,#0a1a2f_100%)]" />
-        <Image
-          src="/x-logo-background.svg"
-          alt=""
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover object-center opacity-[0.14]"
-        />
+        <div className="absolute inset-0 motion-safe:[animation:hero-x-spin_18s_linear_infinite]">
+          <Image
+            src="/x-logo-background.svg"
+            alt=""
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center opacity-[0.14]"
+          />
+        </div>
       </div>
 
       <div
@@ -87,14 +89,16 @@ export function AccentureHero() {
         className="pointer-events-none absolute top-[8%] right-[-8%] h-[min(78vw,920px)] w-[min(78vw,920px)] will-change-transform sm:right-[-4%] lg:top-[4%] lg:right-[-2%]"
         aria-hidden="true"
       >
-        <Image
-          src="/x-logo-background.svg"
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 78vw, 920px"
-          priority
-          className="object-contain opacity-30"
-        />
+        <div className="h-full w-full motion-safe:[animation:hero-x-spin_12s_linear_infinite]">
+          <Image
+            src="/x-logo-background.svg"
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 78vw, 920px"
+            priority
+            className="object-contain opacity-30"
+          />
+        </div>
       </div>
 
       <div
@@ -109,7 +113,13 @@ export function AccentureHero() {
             className="inline-flex items-center gap-3 text-white transition hover:opacity-90"
             aria-label="Apex Vector home"
           >
-            <RotatingXIcon size={34} />
+            <Image
+              src="/x-logo-icon.svg"
+              alt=""
+              width={34}
+              height={34}
+              className="shrink-0"
+            />
             <span className="text-[1.05rem] font-semibold tracking-[-0.02em]">
               apex<span className="text-[#ee6352]">vector</span>
             </span>
@@ -173,7 +183,7 @@ export function AccentureHero() {
                 className="inline-flex items-center gap-2 text-base font-semibold text-white/88 transition hover:text-white"
               >
                 Explore our model
-                <RotatingXIcon size={20} />
+                <ArrowRight className="size-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -211,7 +221,7 @@ export function AccentureHero() {
                 </h2>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white/70 transition group-hover:text-white">
                   Read more
-                  <RotatingXIcon size={16} />
+                  <ArrowRight className="size-4" aria-hidden="true" />
                 </span>
               </a>
             ))}
