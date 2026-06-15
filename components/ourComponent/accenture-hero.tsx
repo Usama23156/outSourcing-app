@@ -6,6 +6,8 @@ import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 
+const heroLogoSrc = "/x-logo-original.png";
+
 const navLinks = [
   { href: "#how-it-works", label: "What we do" },
   { href: "#insights", label: "Insights" },
@@ -74,7 +76,7 @@ export function AccentureHero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(238,99,82,0.18),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(61,90,115,0.28),transparent_36%),linear-gradient(135deg,#0a1a2f_0%,#102742_48%,#0a1a2f_100%)]" />
         <div className="absolute inset-0 motion-safe:[animation:hero-x-spin_18s_linear_infinite]">
           <Image
-            src="/x-logo-background.svg"
+            src={heroLogoSrc}
             alt=""
             fill
             sizes="100vw"
@@ -91,12 +93,12 @@ export function AccentureHero() {
       >
         <div className="h-full w-full motion-safe:[animation:hero-x-spin_12s_linear_infinite]">
           <Image
-            src="/x-logo-background.svg"
+            src={heroLogoSrc}
             alt=""
             fill
             sizes="(max-width: 1024px) 78vw, 920px"
             priority
-            className="object-contain opacity-30"
+            className="object-contain opacity-90"
           />
         </div>
       </div>
@@ -113,13 +115,15 @@ export function AccentureHero() {
             className="inline-flex items-center gap-3 text-white transition hover:opacity-90"
             aria-label="Apex Vector home"
           >
-            <Image
-              src="/x-logo-icon.svg"
-              alt=""
-              width={34}
-              height={34}
-              className="shrink-0"
-            />
+            <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white">
+              <Image
+                src={heroLogoSrc}
+                alt=""
+                fill
+                sizes="40px"
+                className="object-contain p-1.5"
+              />
+            </span>
             <span className="text-[1.05rem] font-semibold tracking-[-0.02em]">
               apex<span className="text-[#ee6352]">vector</span>
             </span>
