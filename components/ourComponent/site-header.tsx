@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -21,15 +22,17 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-8 lg:px-10">
         <a
           href="#top"
-          className="inline-flex items-center gap-3 text-white"
+          className="inline-flex items-center"
           aria-label="Apex Vector home"
         >
-          <span className="flex size-10 items-center justify-center rounded-md bg-white/10 text-sm font-bold tracking-wide backdrop-blur-sm">
-            AV
-          </span>
-          <span className="hidden text-lg font-bold tracking-tight sm:inline">
-            Apex Vector
-          </span>
+          <Image
+            src="/apex-vector-logo.png"
+            alt="Apex Vector"
+            width={1536}
+            height={1024}
+            priority
+            className="h-10 w-auto rounded-md bg-white px-2 py-1 sm:h-11"
+          />
         </a>
 
         <nav

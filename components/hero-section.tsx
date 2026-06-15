@@ -56,13 +56,16 @@ export function HeroSection() {
         <header className="relative z-10 flex items-center justify-between">
           <a
             href="#top"
-            className="inline-flex items-center gap-3 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/80 px-3 py-2 text-sm font-semibold tracking-tight text-[#0B1F3A] shadow-[0_16px_40px_rgba(11,31,58,0.08)] backdrop-blur"
+            className="inline-flex items-center rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/80 px-3 py-2 shadow-[0_16px_40px_rgba(11,31,58,0.08)] backdrop-blur"
             aria-label="Apex Vector home"
           >
-            <span className="flex size-9 items-center justify-center rounded-full bg-[#0B1F3A] text-[#F4F6F9]">
-              AV
-            </span>
-            Apex Vector
+            <Image
+              src="/apex-vector-logo.png"
+              alt="Apex Vector"
+              width={1536}
+              height={1024}
+              className="h-9 w-auto"
+            />
           </a>
           <div className="hidden items-center gap-2 rounded-full border border-[#0B1F3A]/10 bg-[#F4F6F9]/70 px-4 py-2 text-sm font-medium text-[#3D5A73] shadow-[0_16px_40px_rgba(11,31,58,0.06)] backdrop-blur md:flex">
             <Sparkles className="size-4 text-[#E85D4C]" aria-hidden="true" />
