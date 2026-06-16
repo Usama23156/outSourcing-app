@@ -74,16 +74,14 @@ export function AccentureHero() {
         aria-hidden="true"
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(238,99,82,0.18),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(61,90,115,0.28),transparent_36%),linear-gradient(135deg,#0a1a2f_0%,#102742_48%,#0a1a2f_100%)]" />
-        <div className="absolute inset-0 motion-safe:[animation:hero-x-spin_18s_linear_infinite]">
-          <Image
-            src={heroLogoSrc}
-            alt=""
-            fill
-            sizes="100vw"
-            priority
-            className="object-cover object-center opacity-[0.14]"
-          />
-        </div>
+        <Image
+          src={heroLogoSrc}
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover object-center opacity-[0.14]"
+        />
       </div>
 
       <div
@@ -91,16 +89,14 @@ export function AccentureHero() {
         className="pointer-events-none absolute top-[8%] right-[-8%] h-[min(78vw,920px)] w-[min(78vw,920px)] will-change-transform sm:right-[-4%] lg:top-[4%] lg:right-[-2%]"
         aria-hidden="true"
       >
-        <div className="h-full w-full motion-safe:[animation:hero-x-spin_12s_linear_infinite]">
-          <Image
-            src={heroLogoSrc}
-            alt=""
-            fill
-            sizes="(max-width: 1024px) 78vw, 920px"
-            priority
-            className="object-contain opacity-90"
-          />
-        </div>
+        <Image
+          src={heroLogoSrc}
+          alt=""
+          fill
+          sizes="(max-width: 1024px) 78vw, 920px"
+          priority
+          className="object-contain opacity-90"
+        />
       </div>
 
       <div
