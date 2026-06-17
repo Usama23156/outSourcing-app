@@ -20,7 +20,6 @@ export function AccentureHero() {
     const headline = hero.querySelector<HTMLElement>("[data-hero-headline]");
     const body = hero.querySelector<HTMLElement>("[data-hero-body]");
     const background = hero.querySelector<HTMLElement>("[data-hero-bg]");
-    const watermark = hero.querySelector<HTMLElement>("[data-hero-watermark]");
 
     const onScroll = () => {
       const rect = hero.getBoundingClientRect();
@@ -44,11 +43,6 @@ export function AccentureHero() {
         background.style.transform = `translateY(${translateY}px) scale(1.06)`;
         background.style.opacity = (1 - progress * 0.35).toFixed(3);
       }
-
-      if (watermark) {
-        watermark.style.transform = `translate(${translateX * 1.4}px, ${translateY * 0.6}px) scale(${1 + progress * 0.08})`;
-        watermark.style.opacity = (0.28 - progress * 0.08).toFixed(3);
-      }
     };
 
     onScroll();
@@ -65,21 +59,6 @@ export function AccentureHero() {
     >
       <div data-hero-bg className="absolute inset-0 will-change-transform">
         <HeroVideoBackground />
-      </div>
-
-      <div
-        data-hero-watermark
-        className="pointer-events-none absolute top-[8%] right-[-8%] h-[min(78vw,920px)] w-[min(78vw,920px)] will-change-transform sm:right-[-4%] lg:top-[4%] lg:right-[-2%]"
-        aria-hidden="true"
-      >
-        <Image
-          src={heroLogoSrc}
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 78vw, 920px"
-          priority
-          className="object-contain opacity-80 mix-blend-soft-light"
-        />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-6 sm:px-8 lg:px-10">
