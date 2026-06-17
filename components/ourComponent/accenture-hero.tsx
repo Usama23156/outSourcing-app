@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
+import { HeroVideoBackground } from "@/components/ourComponent/hero-video-background";
 import { navLinks } from "@/lib/site-content";
 
 const heroLogoSrc = "/hero-logo.png";
@@ -40,13 +41,13 @@ export function AccentureHero() {
       }
 
       if (background) {
-        background.style.transform = `translateY(${translateY}px) scale(1.04)`;
+        background.style.transform = `translateY(${translateY}px) scale(1.06)`;
         background.style.opacity = (1 - progress * 0.35).toFixed(3);
       }
 
       if (watermark) {
         watermark.style.transform = `translate(${translateX * 1.4}px, ${translateY * 0.6}px) scale(${1 + progress * 0.08})`;
-        watermark.style.opacity = (0.3 - progress * 0.08).toFixed(3);
+        watermark.style.opacity = (0.28 - progress * 0.08).toFixed(3);
       }
     };
 
@@ -62,20 +63,8 @@ export function AccentureHero() {
       id="top"
       className="relative min-h-screen overflow-hidden bg-[#0a1a2f] text-white"
     >
-      <div
-        data-hero-bg
-        className="pointer-events-none absolute inset-0 will-change-transform"
-        aria-hidden="true"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(238,99,82,0.18),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(61,90,115,0.28),transparent_36%),linear-gradient(135deg,#0a1a2f_0%,#102742_48%,#0a1a2f_100%)]" />
-        <Image
-          src={heroLogoSrc}
-          alt=""
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover object-center opacity-[0.14]"
-        />
+      <div data-hero-bg className="absolute inset-0 will-change-transform">
+        <HeroVideoBackground />
       </div>
 
       <div
@@ -89,14 +78,9 @@ export function AccentureHero() {
           fill
           sizes="(max-width: 1024px) 78vw, 920px"
           priority
-          className="object-contain opacity-90"
+          className="object-contain opacity-80 mix-blend-soft-light"
         />
       </div>
-
-      <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(10,26,47,0.94)_0%,rgba(10,26,47,0.82)_42%,rgba(10,26,47,0.35)_68%,rgba(10,26,47,0.12)_100%)]"
-        aria-hidden="true"
-      />
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-6 sm:px-8 lg:px-10">
         <header className="flex items-center justify-between py-7 lg:py-9">
