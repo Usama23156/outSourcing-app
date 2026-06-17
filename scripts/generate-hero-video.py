@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate hero background video with rotating X icon (no brand logo watermark)."""
+"""Generate hero background video with rotating brand mark (flat, no shadow)."""
 
 from __future__ import annotations
 
@@ -16,85 +16,63 @@ DURATION = 12
 FRAMES = FPS * DURATION
 OUT_DIR = Path(__file__).resolve().parent.parent / "public"
 FRAMES_DIR = Path("/tmp/hero-video-frames")
+MARK_PATH = OUT_DIR / "hero-mark-flat.png"
+NAVY = (10, 26, 47, 255)
 
 
-def draw_x_icon(
-    draw: ImageDraw.ImageDraw,
-    cx: float,
-    cy: float,
-    angle: float,
-    scale: float,
-) -> None:
-    def bar(x1, y1, x2, y2, width, color):
-        dx, dy = x2 - x1, y2 - y1
-        length = math.hypot(dx, dy) or 1
-        nx, ny = -dy / length * width / 2, dx / length * width / 2
-        points = [
-            (x1 + nx, y1 + ny),
-            (x2 + nx, y2 + ny),
-            (x2 - nx, y2 - ny),
-            (x1 - nx, y1 - ny),
-        ]
-        draw.polygon(points, fill=color)
+def prepare_mark() -> Image.Image:
+    if not MARK_PATH.exists():
+        source = OUT_DIR / "hero-logo.png"
+        img = Image.open(source).convert("RGBA")
+        pixels = img.load()
+        for y in range(img.height):
+            for x in range(img.width):
+                r, g, b, a = pixels[x, y]
+                if r > 235 and g > 235 and b > 235:
+                    pixels[x, y] = (r, g, b, 0)
+        img.save(MARK_PATH)
 
-    cos_a, sin_a = math.cos(angle), math.sin(angle)
-    half = 180 * scale
-
-    for sign in (-1, 1):
-        for layer, width, color, size in (
-            (0, 52, (10, 26, 47), 1.0),
-            (1, 42, (238, 99, 82), 0.88),
-        ):
-            x1, y1 = -half * size * sign, -half * size
-            x2, y2 = half * size * sign, half * size
-            rx1 = cx + x1 * cos_a - y1 * sin_a
-            ry1 = cy + x1 * sin_a + y1 * cos_a
-            rx2 = cx + x2 * cos_a - y2 * sin_a
-            ry2 = cy + x2 * sin_a + y2 * cos_a
-            bar(rx1, ry1, rx2, ry2, width * scale, color)
+    return Image.open(MARK_PATH).convert("RGBA")
 
 
-def render_frame(t: float) -> Image.Image:
-    base = Image.new("RGBA", (WIDTH, HEIGHT), (10, 26, 47, 255))
-    overlay = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
+def render_frame(t: float, mark: Image.Image) -> Image.Image:
+    frame = Image.new("RGBA", (WIDTH, HEIGHT), NAVY)
 
-    glow_x = int(WIDTH * 0.72 + math.sin(t * 1.4) * 48)
-    glow_y = int(HEIGHT * 0.46 + math.cos(t * 1.1) * 36)
+    ambient = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(ambient)
+
+    drift_x = int(WIDTH * 0.18 + math.cos(t * 0.9) * 24)
+    drift_y = int(HEIGHT * 0.22 + math.sin(t * 0.7) * 18)
     draw.ellipse(
-        [glow_x - 520, glow_y - 520, glow_x + 520, glow_y + 520],
-        fill=(238, 99, 82, 28),
-    )
-    draw.ellipse(
-        [glow_x - 320, glow_y - 320, glow_x + 320, glow_y + 320],
-        fill=(61, 90, 115, 35),
+        [drift_x - 240, drift_y - 240, drift_x + 240, drift_y + 240],
+        fill=(16, 39, 66, 55),
     )
 
-    secondary_x = int(WIDTH * 0.18 + math.cos(t * 0.9) * 30)
-    secondary_y = int(HEIGHT * 0.25 + math.sin(t * 0.7) * 24)
-    draw.ellipse(
-        [secondary_x - 280, secondary_y - 280, secondary_x + 280, secondary_y + 280],
-        fill=(16, 39, 66, 90),
-    )
+    frame = Image.alpha_composite(frame, ambient)
 
-    img = Image.alpha_composite(base, overlay)
-    icon_layer = Image.new("RGBA", (WIDTH, HEIGHT), (0, 0, 0, 0))
-    icon_draw = ImageDraw.Draw(icon_layer)
+    angle = (t / DURATION) * 360
+    scale = 0.62
+    target_w = int(mark.width * scale)
+    target_h = int(mark.height * scale)
+    resized = mark.resize((target_w, target_h), Image.Resampling.LANCZOS)
+    rotated = resized.rotate(angle, resample=Image.Resampling.BICUBIC, expand=True)
 
-    angle = (t / DURATION) * math.tau
-    draw_x_icon(icon_draw, WIDTH * 0.72, HEIGHT * 0.46, angle, 1.35)
+    icon_x = int(WIDTH * 0.72 - rotated.width / 2)
+    icon_y = int(HEIGHT * 0.46 - rotated.height / 2)
+    frame.alpha_composite(rotated, (icon_x, icon_y))
 
-    return Image.alpha_composite(img, icon_layer).convert("RGB")
+    return frame.convert("RGB")
 
 
 def main() -> None:
+    mark = prepare_mark()
     FRAMES_DIR.mkdir(parents=True, exist_ok=True)
     for old in FRAMES_DIR.glob("frame_*.png"):
         old.unlink()
 
     for frame in range(FRAMES):
         t = frame / FPS
-        render_frame(t).save(FRAMES_DIR / f"frame_{frame:04d}.png")
+        render_frame(t, mark).save(FRAMES_DIR / f"frame_{frame:04d}.png")
         if frame % 24 == 0:
             print(f"Rendered frame {frame + 1}/{FRAMES}")
 
@@ -131,6 +109,8 @@ def main() -> None:
             "-i",
             str(video_path),
             "-vframes",
+            "1",
+            "-update",
             "1",
             "-q:v",
             "2",

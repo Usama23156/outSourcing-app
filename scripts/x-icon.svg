@@ -1,8 +1,0 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(256 256)">
-    <path d="M-46 -220 L46 -220 L220 46 L128 46 Z" fill="#0a1a2f" transform="rotate(-38)"/>
-    <path d="M-46 -220 L46 -220 L220 46 L128 46 Z" fill="#0a1a2f" transform="rotate(38)"/>
-    <path d="M-38 -200 L38 -200 L200 38 L124 38 Z" fill="#ee6352" transform="rotate(-38) translate(20 -12)"/>
-    <path d="M-38 -200 L38 -200 L200 38 L124 38 Z" fill="#ee6352" transform="rotate(38) translate(-20 -12)"/>
-  </g>
-</svg>
