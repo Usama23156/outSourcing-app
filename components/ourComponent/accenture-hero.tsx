@@ -5,15 +5,9 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
+import { navLinks } from "@/lib/site-content";
 
 const heroLogoSrc = "/hero-logo.png";
-
-const navLinks = [
-  { href: "#how-it-works", label: "What we do" },
-  { href: "#insights", label: "Insights" },
-  { href: "#careers", label: "Careers" },
-  { href: "#book-strategy-call", label: "Contact" },
-];
 
 export function AccentureHero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -179,7 +173,7 @@ export function AccentureHero() {
                 <a href="#book-strategy-call">See what we do</a>
               </Button>
               <a
-                href="#how-it-works"
+                href="#services"
                 className="inline-flex items-center gap-2 text-base font-semibold text-white/88 transition hover:text-white"
               >
                 Explore our model
@@ -200,12 +194,12 @@ export function AccentureHero() {
               {
                 eyebrow: "Perspective",
                 title: "Outcome-based outsourcing built for continuous reinvention",
-                href: "#how-it-works",
+                href: "#services",
               },
               {
                 eyebrow: "Case Study",
                 title: "From pilot to production in 72 hours with vetted specialists",
-                href: "#book-strategy-call",
+                href: "#case-studies",
               },
             ].map((card) => (
               <a
