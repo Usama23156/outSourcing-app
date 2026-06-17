@@ -5,15 +5,10 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
+import { HeroVideoBackground } from "@/components/ourComponent/hero-video-background";
+import { navLinks } from "@/lib/site-content";
 
 const heroLogoSrc = "/hero-logo.png";
-
-const navLinks = [
-  { href: "#how-it-works", label: "What we do" },
-  { href: "#insights", label: "Insights" },
-  { href: "#careers", label: "Careers" },
-  { href: "#book-strategy-call", label: "Contact" },
-];
 
 export function AccentureHero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -25,7 +20,6 @@ export function AccentureHero() {
     const headline = hero.querySelector<HTMLElement>("[data-hero-headline]");
     const body = hero.querySelector<HTMLElement>("[data-hero-body]");
     const background = hero.querySelector<HTMLElement>("[data-hero-bg]");
-    const watermark = hero.querySelector<HTMLElement>("[data-hero-watermark]");
 
     const onScroll = () => {
       const rect = hero.getBoundingClientRect();
@@ -46,13 +40,8 @@ export function AccentureHero() {
       }
 
       if (background) {
-        background.style.transform = `translateY(${translateY}px) scale(1.04)`;
+        background.style.transform = `translateY(${translateY}px) scale(1.06)`;
         background.style.opacity = (1 - progress * 0.35).toFixed(3);
-      }
-
-      if (watermark) {
-        watermark.style.transform = `translate(${translateX * 1.4}px, ${translateY * 0.6}px) scale(${1 + progress * 0.08})`;
-        watermark.style.opacity = (0.3 - progress * 0.08).toFixed(3);
       }
     };
 
@@ -68,41 +57,9 @@ export function AccentureHero() {
       id="top"
       className="relative min-h-screen overflow-hidden bg-[#0a1a2f] text-white"
     >
-      <div
-        data-hero-bg
-        className="pointer-events-none absolute inset-0 will-change-transform"
-        aria-hidden="true"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(238,99,82,0.18),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(61,90,115,0.28),transparent_36%),linear-gradient(135deg,#0a1a2f_0%,#102742_48%,#0a1a2f_100%)]" />
-        <Image
-          src={heroLogoSrc}
-          alt=""
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover object-center opacity-[0.14]"
-        />
+      <div data-hero-bg className="absolute inset-0 will-change-transform">
+        <HeroVideoBackground />
       </div>
-
-      <div
-        data-hero-watermark
-        className="pointer-events-none absolute top-[8%] right-[-8%] h-[min(78vw,920px)] w-[min(78vw,920px)] will-change-transform sm:right-[-4%] lg:top-[4%] lg:right-[-2%]"
-        aria-hidden="true"
-      >
-        <Image
-          src={heroLogoSrc}
-          alt=""
-          fill
-          sizes="(max-width: 1024px) 78vw, 920px"
-          priority
-          className="object-contain opacity-90"
-        />
-      </div>
-
-      <div
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(10,26,47,0.94)_0%,rgba(10,26,47,0.82)_42%,rgba(10,26,47,0.35)_68%,rgba(10,26,47,0.12)_100%)]"
-        aria-hidden="true"
-      />
 
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-6 sm:px-8 lg:px-10">
         <header className="flex items-center justify-between py-7 lg:py-9">
@@ -179,7 +136,7 @@ export function AccentureHero() {
                 <a href="#book-strategy-call">See what we do</a>
               </Button>
               <a
-                href="#how-it-works"
+                href="#services"
                 className="inline-flex items-center gap-2 text-base font-semibold text-white/88 transition hover:text-white"
               >
                 Explore our model
@@ -200,12 +157,12 @@ export function AccentureHero() {
               {
                 eyebrow: "Perspective",
                 title: "Outcome-based outsourcing built for continuous reinvention",
-                href: "#how-it-works",
+                href: "#services",
               },
               {
                 eyebrow: "Case Study",
                 title: "From pilot to production in 72 hours with vetted specialists",
-                href: "#book-strategy-call",
+                href: "#case-studies",
               },
             ].map((card) => (
               <a

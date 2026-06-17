@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Vector | Performance-Based Outsourcing",
+  title: "Apex Vector | Enterprise Technology Outsourcing",
   description:
-    "Scale faster with vetted global specialists, measurable delivery targets, and AI-assisted operations from Apex Vector.",
+    "Premium technology outsourcing for web development, performance marketing, lead generation, dedicated teams, BPO, and digital transformation.",
 };
 
 export default function RootLayout({
