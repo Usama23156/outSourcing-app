@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 78" fill="none" role="img" aria-label="A1 Title Services icon">
+  <title>A1 Title Services icon</title>
+  <!-- Dark navy A + 1 -->
+  <path d="M8 74 L34 8" stroke="#1A3B6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15 46 H41" stroke="#1A3B6B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M40 20 V74 H52 V20 H40 Z" fill="#1A3B6B"/>
+  <path d="M40 20 L48 12" stroke="#1A3B6B" stroke-width="3" stroke-linecap="round"/>
+  <!-- Light blue 1 -->
+  <path d="M74 4 V74 H60 V16 L74 4 Z" fill="#4D9FE8"/>
+</svg>
