@@ -7,12 +7,75 @@ export const brand = {
 } as const;
 
 export const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#insights", label: "Insights" },
-  { href: "#book-strategy-call", label: "Contact" },
+  { href: "/services", label: "Services" },
+  { href: "/process", label: "Process" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/insights", label: "Insights" },
+  { href: "/contact", label: "Contact" },
 ] as const;
+
+export const footerLinks = [
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Services", href: "/services" },
+      { label: "Process", href: "/process" },
+      { label: "Case Studies", href: "/case-studies" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Insights", href: "/insights" },
+      { label: "Industries", href: "/industries" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+] as const;
+
+export const pageMeta = {
+  home: {
+    title: "Apex Vector | Enterprise Technology Outsourcing",
+    description:
+      "Premium technology outsourcing for web development, performance marketing, lead generation, dedicated teams, BPO, and digital transformation.",
+  },
+  services: {
+    title: "Services | Apex Vector",
+    description:
+      "Enterprise outsourcing services including web development, performance marketing, lead generation, dedicated teams, BPO, and digital transformation.",
+  },
+  process: {
+    title: "Our Process | Apex Vector",
+    description:
+      "Discover how Apex Vector delivers enterprise outsourcing through discovery, strategy, execution, and optimization.",
+  },
+  caseStudies: {
+    title: "Case Studies | Apex Vector",
+    description:
+      "See how Apex Vector helps enterprises achieve measurable outcomes across healthcare, SaaS, and real estate.",
+  },
+  insights: {
+    title: "Insights | Apex Vector",
+    description:
+      "Research, perspectives, and case studies on outsourcing, growth, and enterprise transformation.",
+  },
+  industries: {
+    title: "Industries | Apex Vector",
+    description:
+      "Technology outsourcing expertise for healthcare, real estate, SaaS, finance, and e-commerce.",
+  },
+  about: {
+    title: "About Us | Apex Vector",
+    description:
+      "Why enterprises choose Apex Vector for performance-driven outsourcing and dedicated teams.",
+  },
+  contact: {
+    title: "Contact | Apex Vector",
+    description:
+      "Book a strategy call with Apex Vector to discuss your outsourcing and growth goals.",
+  },
+} as const;
 
 export const strategicStats = [
   { value: 150, suffix: "+", label: "Specialists deployed" },

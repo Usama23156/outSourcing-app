@@ -5,15 +5,21 @@ import { SectionShell } from "@/components/layout/section-shell";
 import { FadeIn } from "@/components/motion/fade-in";
 import { testimonials } from "@/lib/site-content";
 
-export function TestimonialsSection() {
+interface TestimonialsSectionProps {
+  showHeader?: boolean;
+}
+
+export function TestimonialsSection({ showHeader = true }: TestimonialsSectionProps) {
   return (
-    <SectionShell id="testimonials">
-      <SectionHeader
-        align="center"
-        eyebrow="Client voices"
-        title="Trusted by leaders who measure success in outcomes"
-        description="Enterprise executives share how Apex Vector transformed their operating model and accelerated growth."
-      />
+    <SectionShell>
+      {showHeader ? (
+        <SectionHeader
+          align="center"
+          eyebrow="Client voices"
+          title="Trusted by leaders who measure success in outcomes"
+          description="Enterprise executives share how Apex Vector transformed their operating model and accelerated growth."
+        />
+      ) : null}
 
       <div className="grid gap-6 lg:grid-cols-3">
         {testimonials.map((item, index) => (

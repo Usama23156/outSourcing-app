@@ -5,20 +5,22 @@ import { SectionShell } from "@/components/layout/section-shell";
 import { FadeIn } from "@/components/motion/fade-in";
 import { processSteps } from "@/lib/site-content";
 
-export function ProcessSection() {
+export function ProcessSection({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <SectionShell id="process" dark>
+    <SectionShell dark>
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(238,99,82,0.12),transparent_40%)]"
         aria-hidden="true"
       />
 
-      <SectionHeader
-        dark
-        eyebrow="How we deliver"
-        title="A four-stage framework for enterprise-grade execution"
-        description="From initial discovery to continuous optimization, every engagement follows a proven methodology designed for transparency and compounding results."
-      />
+      {showHeader ? (
+        <SectionHeader
+          dark
+          eyebrow="How we deliver"
+          title="A four-stage framework for enterprise-grade execution"
+          description="From initial discovery to continuous optimization, every engagement follows a proven methodology designed for transparency and compounding results."
+        />
+      ) : null}
 
       <div className="relative">
         <div

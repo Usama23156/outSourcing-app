@@ -7,18 +7,26 @@ import { SectionShell } from "@/components/layout/section-shell";
 import { FadeIn } from "@/components/motion/fade-in";
 import { advantages } from "@/lib/site-content";
 
-export function WhyChooseUsSection() {
+export function WhyChooseUsSection({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <SectionShell id="why-us">
-      <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
-        <SectionHeader
-          eyebrow="Why Apex Vector"
-          title="The outsourcing partner built for enterprises that demand more"
-          description="We don't compete on price or headcount. We compete on outcomes — delivering the operational excellence, strategic depth, and performance accountability that high-growth organizations require."
-          className="mb-0 lg:mb-0"
-        />
+    <SectionShell>
+      <div
+        className={
+          showHeader
+            ? "grid items-start gap-16 lg:grid-cols-2 lg:gap-20"
+            : "grid gap-5 lg:grid-cols-2"
+        }
+      >
+        {showHeader ? (
+          <SectionHeader
+            eyebrow="Why Apex Vector"
+            title="The outsourcing partner built for enterprises that demand more"
+            description="We don't compete on price or headcount. We compete on outcomes — delivering the operational excellence, strategic depth, and performance accountability that high-growth organizations require."
+            className="mb-0 lg:mb-0"
+          />
+        ) : null}
 
-        <div className="space-y-5">
+        <div className={showHeader ? "space-y-5" : "contents"}>
           {advantages.map((item, index) => (
             <FadeIn key={item.title} delay={index * 0.1}>
               <article className="flex gap-5 rounded-2xl border border-[#0a1a2f]/8 bg-white p-6 transition hover:border-[#ee6352]/20 hover:shadow-[0_20px_50px_rgba(10,26,47,0.06)]">

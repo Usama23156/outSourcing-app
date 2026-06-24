@@ -1,14 +1,11 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 import { Button } from "@/components/ui/button";
 import { HeroVideoBackground } from "@/components/ourComponent/hero-video-background";
-import { navLinks } from "@/lib/site-content";
-
-const heroLogoSrc = "/hero-logo.png";
 
 export function AccentureHero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -52,53 +49,13 @@ export function AccentureHero() {
   }, []);
 
   return (
-    <section
-      ref={heroRef}
-      id="top"
-      className="relative min-h-screen overflow-hidden bg-[#0a1a2f] text-white"
-    >
+    <section ref={heroRef} className="relative min-h-screen overflow-hidden bg-[#0a1a2f] text-white">
       <div data-hero-bg className="absolute inset-0 will-change-transform">
         <HeroVideoBackground />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-6 sm:px-8 lg:px-10">
-        <header className="flex items-center justify-between py-7 lg:py-9">
-          <a
-            href="#top"
-            className="inline-flex items-center gap-3 text-white transition hover:opacity-90"
-            aria-label="Apex Vector home"
-          >
-            <span className="relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white">
-              <Image
-                src={heroLogoSrc}
-                alt=""
-                fill
-                sizes="40px"
-                className="object-contain p-1.5"
-              />
-            </span>
-            <span className="text-[1.05rem] font-semibold tracking-[-0.02em]">
-              apex<span className="text-[#ee6352]">vector</span>
-            </span>
-          </a>
-
-          <nav
-            className="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex"
-            aria-label="Primary"
-          >
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="transition hover:text-white"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </header>
-
-        <div className="flex flex-1 items-center py-16 lg:py-20">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1240px] flex-col px-6 pt-24 sm:px-8 lg:px-10 lg:pt-28">
+        <div className="flex flex-1 items-center py-12 lg:py-16">
           <div className="max-w-3xl">
             <p
               data-hero-body
@@ -133,15 +90,15 @@ export function AccentureHero() {
                 size="lg"
                 className="h-14 rounded-full border-2 border-white bg-transparent px-8 text-base font-semibold text-white hover:bg-white hover:text-[#0a1a2f]"
               >
-                <a href="#book-strategy-call">See what we do</a>
+                <Link href="/contact">See what we do</Link>
               </Button>
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="inline-flex items-center gap-2 text-base font-semibold text-white/88 transition hover:text-white"
               >
                 Explore our model
                 <ArrowRight className="size-5" aria-hidden="true" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -152,20 +109,20 @@ export function AccentureHero() {
               {
                 eyebrow: "Research Report",
                 title: "AI agents are changing how enterprise teams scale",
-                href: "#insights",
+                href: "/insights",
               },
               {
                 eyebrow: "Perspective",
                 title: "Outcome-based outsourcing built for continuous reinvention",
-                href: "#services",
+                href: "/services",
               },
               {
                 eyebrow: "Case Study",
                 title: "From pilot to production in 72 hours with vetted specialists",
-                href: "#case-studies",
+                href: "/case-studies",
               },
             ].map((card) => (
-              <a
+              <Link
                 key={card.title}
                 href={card.href}
                 className="group rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition hover:border-[#ee6352]/40 hover:bg-white/8"
@@ -180,7 +137,7 @@ export function AccentureHero() {
                   Read more
                   <ArrowRight className="size-4" aria-hidden="true" />
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

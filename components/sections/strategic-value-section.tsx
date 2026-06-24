@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 import { SectionHeader } from "@/components/layout/section-header";
 import { SectionShell } from "@/components/layout/section-shell";
@@ -8,17 +9,29 @@ import { AnimatedStat } from "@/components/motion/animated-stat";
 import { FadeIn } from "@/components/motion/fade-in";
 import { strategicStats } from "@/lib/site-content";
 
-export function StrategicValueSection() {
-  return (
-    <SectionShell id="strategic-value" className="bg-white">
-      <div className="grid items-end gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-        <SectionHeader
-          eyebrow="360° Value"
-          title="Built to help enterprises scale with precision, not overhead"
-          description="Apex Vector embeds high-performance outsourcing into your operating model — combining dedicated talent, measurable targets, and AI-assisted workflows so growth compounds instead of stalls."
-        />
+interface StrategicValueSectionProps {
+  showHeader?: boolean;
+}
 
-        <FadeIn delay={0.15} className="grid gap-6 sm:grid-cols-2">
+export function StrategicValueSection({ showHeader = true }: StrategicValueSectionProps) {
+  return (
+    <SectionShell className="bg-white">
+      <div
+        className={
+          showHeader
+            ? "grid items-end gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20"
+            : "grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        }
+      >
+        {showHeader ? (
+          <SectionHeader
+            eyebrow="360° Value"
+            title="Built to help enterprises scale with precision, not overhead"
+            description="Apex Vector embeds high-performance outsourcing into your operating model — combining dedicated talent, measurable targets, and AI-assisted workflows so growth compounds instead of stalls."
+          />
+        ) : null}
+
+        <FadeIn delay={0.15} className={showHeader ? "grid gap-6 sm:grid-cols-2" : "contents"}>
           {strategicStats.map((stat, index) => (
             <div
               key={stat.label}
@@ -43,15 +56,17 @@ export function StrategicValueSection() {
         </FadeIn>
       </div>
 
-      <FadeIn delay={0.2} className="mt-16 lg:mt-20">
-        <a
-          href="#services"
-          className="group inline-flex items-center gap-3 text-base font-semibold text-[#0a1a2f] transition hover:text-[#ee6352]"
-        >
-          Explore our capabilities
-          <ArrowUpRight className="size-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
-      </FadeIn>
+      {showHeader ? (
+        <FadeIn delay={0.2} className="mt-16 lg:mt-20">
+          <Link
+            href="/services"
+            className="group inline-flex items-center gap-3 text-base font-semibold text-[#0a1a2f] transition hover:text-[#ee6352]"
+          >
+            Explore our capabilities
+            <ArrowUpRight className="size-5 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </FadeIn>
+      ) : null}
     </SectionShell>
   );
 }

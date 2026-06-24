@@ -1,27 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import { brand, socialLinks } from "@/lib/site-content";
-
-const footerLinks = [
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#strategic-value" },
-      { label: "Services", href: "#services" },
-      { label: "Process", href: "#process" },
-      { label: "Case Studies", href: "#case-studies" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Insights", href: "#insights" },
-      { label: "Industries", href: "#industries" },
-      { label: "Why Us", href: "#why-us" },
-      { label: "Contact", href: "#book-strategy-call" },
-    ],
-  },
-] as const;
+import { brand, footerLinks, socialLinks } from "@/lib/site-content";
 
 export function SiteFooter() {
   return (
@@ -29,8 +9,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1240px] px-6 py-16 sm:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <a
-              href="#top"
+            <Link
+              href="/"
               className="inline-flex items-center gap-3"
               aria-label={`${brand.name} home`}
             >
@@ -46,7 +26,7 @@ export function SiteFooter() {
               <span className="text-lg font-semibold tracking-[-0.02em]">
                 apex<span className="text-[#ee6352]">vector</span>
               </span>
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-base leading-7 text-white/60">
               {brand.tagline}
             </p>
@@ -65,12 +45,12 @@ export function SiteFooter() {
               <ul className="mt-5 space-y-3">
                 {group.links.map((link) => (
                   <li key={link.label}>
-                    <a
+                    <Link
                       href={link.href}
                       className="text-base text-white/70 transition hover:text-white"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

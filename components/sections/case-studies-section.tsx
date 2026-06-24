@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { SectionHeader } from "@/components/layout/section-header";
@@ -8,20 +9,22 @@ import { SectionShell } from "@/components/layout/section-shell";
 import { FadeIn } from "@/components/motion/fade-in";
 import { caseStudies } from "@/lib/site-content";
 
-export function CaseStudiesSection() {
+export function CaseStudiesSection({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <SectionShell id="case-studies" dark>
+    <SectionShell dark>
       <div
         className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(238,99,82,0.06)_100%)]"
         aria-hidden="true"
       />
 
-      <SectionHeader
-        dark
-        eyebrow="Client impact"
-        title="Outcomes that redefine what outsourcing can deliver"
-        description="Real engagements. Measurable business results. The kind of transformation that earns boardroom attention."
-      />
+      {showHeader ? (
+        <SectionHeader
+          dark
+          eyebrow="Client impact"
+          title="Outcomes that redefine what outsourcing can deliver"
+          description="Real engagements. Measurable business results. The kind of transformation that earns boardroom attention."
+        />
+      ) : null}
 
       <div className="space-y-6">
         {caseStudies.map((study, index) => (
@@ -47,13 +50,13 @@ export function CaseStudiesSection() {
                   <p className="mt-5 max-w-2xl text-base leading-7 text-white/70">
                     {study.summary}
                   </p>
-                  <a
-                    href="#book-strategy-call"
+                  <Link
+                    href="/contact"
                     className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#ee6352] transition group-hover:text-white"
                   >
                     Discuss a similar engagement
                     <ArrowRight className="size-4" />
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="border-t border-white/10 bg-[#0a1a2f]/80 p-8 sm:p-10 lg:border-t-0 lg:border-l">

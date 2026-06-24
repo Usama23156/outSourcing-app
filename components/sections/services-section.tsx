@@ -24,14 +24,16 @@ const iconMap = {
   sparkles: Sparkles,
 } as const;
 
-export function ServicesSection() {
+export function ServicesSection({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <SectionShell id="services">
-      <SectionHeader
+    <SectionShell>
+      {showHeader ? (
+        <SectionHeader
         eyebrow="What we do"
         title="Strategic outsourcing capabilities for modern enterprises"
         description="Every service is delivered through dedicated teams, outcome-based accountability, and the operational rigor your organization demands."
-      />
+        />
+      ) : null}
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => {

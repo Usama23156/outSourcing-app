@@ -1,18 +1,22 @@
 "use client";
 
+import Link from "next/link";
+
 import { SectionHeader } from "@/components/layout/section-header";
 import { SectionShell } from "@/components/layout/section-shell";
 import { FadeIn } from "@/components/motion/fade-in";
 import { industries } from "@/lib/site-content";
 
-export function IndustriesSection() {
+export function IndustriesSection({ showHeader = true }: { showHeader?: boolean }) {
   return (
-    <SectionShell id="industries" className="bg-white">
-      <SectionHeader
+    <SectionShell className="bg-white">
+      {showHeader ? (
+        <SectionHeader
         eyebrow="Industries"
         title="Deep domain expertise across high-growth sectors"
         description="We bring industry-specific knowledge, compliance awareness, and proven playbooks to every engagement — so your team hits the ground running."
-      />
+        />
+      ) : null}
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {industries.map((industry, index) => (
@@ -40,12 +44,12 @@ export function IndustriesSection() {
             <p className="text-lg font-semibold text-[#0a1a2f]">
               Your industry not listed?
             </p>
-            <a
-              href="#book-strategy-call"
+            <Link
+              href="/contact"
               className="mt-3 text-base font-medium text-[#ee6352] transition hover:text-[#0a1a2f]"
             >
               Let&apos;s discuss your requirements →
-            </a>
+            </Link>
           </article>
         </FadeIn>
       </div>
